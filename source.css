@@ -34,3 +34,14 @@ h1
 	color:black;
 	border:2px solid black;
 }
+#btn,#button
+{
+	width:80%;
+	margin:auto;
+	height:30px;
+	outline:none;
+	border:none;
+	color:black;
+	background:none;
+	background-color:black;
+}
