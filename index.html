@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tiles</title>
+	<link rel="stylesheet" type="text/css" href="source.css">
+</head>
+<body>
+	<h1>your score</h1>
+	<h2 id="value">0</h2>
+<div class="container">
+<button id="btn" onclick="start()">start game</button>
+<button id="button" onclick="restart()" style="display: none;">restart game</button>
+	<div class="game">
+		<button value="0" class="block" onclick="next(0)"></button>
+		<button value="1" class="block" onclick="next(1)"></button>
+		<button value="2" class="block" onclick="next(2)"></button>
+		<button value="3" class="block" onclick="next(3)"></button>
+		<button value="4" class="block" onclick="next(4)"></button>
+		<button value="5" class="block" onclick="next(5)"></button>
+		<button value="6" class="block" onclick="next(6)"></button>
+		<button value="7" class="block" onclick="next(7)"></button>
+		<button value="8" class="block" onclick="next(8)"></button>
+		<button value="9" class="block" onclick="next(9)"></button>
+		<button value="10" class="block" onclick="next(10)"></button>
+		<button value="11" class="block" onclick="next(11)"></button>
+		<button value="12" class="block" onclick="next(12)"></button>
+		<button value="13" class="block" onclick="next(13)"></button>
+		<button value="14" class="block" onclick="next(14)"></button>
+		<button value="15" class="block" onclick="next(15)"></button>
+		<button value="16" class="block" onclick="next(16)"></button>
+		<button value="17" class="block" onclick="next(17)"></button>
+		<button value="18" class="block" onclick="next(18)"></button>
+		<button value="19" class="block" onclick="next(19)"></button>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	var z=0;
+	var score=0;
+	 var x = document.getElementsByClassName("block")
+	 function next(x)
+	 {
+	 	c=parseInt(x);
+	 	if(z==c)
+	 	{
+	 		start();
+	 		score=score+1;
+	 		document.getElementById("value").innerHTML=score;
+	  	}
+	  	else
+	  	{
+	  		alert("you lost the game and your score is "+score);
+	  		score=0;
+	  		document.getElementById("value").innerHTML=score;
+	  		restart();
+	  	}
+	 }
+	function start()
+{
+  	var y=Math.floor(Math.random() * 20);
+  for (var i = 0; i < 20; i++)
+   {
+    if (i==y)
+    {
+    	x[i].style.backgroundColor = "white";
+    	x[i].style.cursor = "pointer";
+    	z=i;
+    }
+    else
+    {
+    	x[i].style.backgroundColor = "black";
+    }
+   }
+   document.getElementById("btn").style.display="none"
+   document.getElementById("button").style.display="initial";
+}
+function restart()
+{
+	
+	document.getElementById("button").style.display="none";
+	 document.getElementById("btn").style.display="initial";
+	 alert("you restarted the game your score is "+score);
+	 score=0;
+	document.getElementById("value").innerHTML=score;
+	for (var i = 0; i < 20; i++)
+  {
+    	x[i].style.backgroundColor = "black";
+  }
+}
+</script>
+</html>
