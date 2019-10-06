@@ -27,3 +27,10 @@
 	transition-duration: .4s;
 	 
 }
+h1
+{
+	text-align:center;
+	font-size:50vw;
+	color:black;
+	border:2px solid black;
+}
