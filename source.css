@@ -37,11 +37,12 @@ h1
 #btn,#button
 {
 	width:80%;
-	margin:auto;
-	height:30px;
-	outline:none;
-	border:none;
+	height:50px;
 	color:black;
-	background:none;
-	background-color:black;
+	border:2px solid black;
+}
+h2
+{
+	text-align:center;
+	width:20%;	
 }
