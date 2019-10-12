@@ -5,8 +5,8 @@
 }
 .game
 {
-	width: 420px;
-	height: 510px;
+	width: 50vw;
+	height: 50vh;
 	position: absolute;
 	left: 50%;
 	top: 80%;
@@ -17,8 +17,8 @@
 
 .block
 {
-	height: 98px;
-	width: 98px;
+	height: 10vw;
+	width: 8vh;
 	display: inline-block;
 	border:1px solid white;
 	margin: 2px; 
